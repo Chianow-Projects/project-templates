@@ -1,0 +1,96 @@
+
+const { Client, Intents } = require('discord.js');
+const { token } = require('./config.json');
+
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+var arrChannelID = ['892068712037892200', '892571527000776835']
+
+
+// Listener
+var count=0;
+client.on('applicationCommandCreate', command => {
+	console.log(`[%d]onApplicationCommandCreate:  ${command.name}!`, ++count);
+	console.log(`[%d]\t\t Server(Guild) ID  \t: ${command.guild.id}!`, count);
+	console.log(`[%d]\t\t Server(Guild) Name\t: ${command.guild.name}!`, count);
+	console.log(`[%d]\t\t Member Count      \t: ${command.guild.memberCount}!`, count);
+});
+
+client.on('applicationCommandDelete', command => {
+	console.log(`[%d]onApplicationCommandDelete:  ${command.name}!`, ++count);
+	console.log(`[%d]\t\t Server(Guild) ID  \t: ${command.guild.id}!`, count);
+	console.log(`[%d]\t\t Server(Guild) Name\t: ${command.guild.name}!`, count);
+	console.log(`[%d]\t\t Member Count      \t: ${command.guild.memberCount}!`, count);
+});
+
+client.on('applicationCommandUpdate', (oldCommand, newCommand) => {
+	console.log(`[%d]onApplicationCommandUpdate:  `, ++count);
+	console.log(`[%d]\t\t oldCommand        \t: ${oldCommand.name}!`, count);
+	console.log(`[%d]\t\t newCommand        \t: ${newCommand.name}!`, count);
+});
+
+client.on('channelCreate', channel => {
+	console.log(`[%d]onChannelCreate:   ${channel.name}`, ++count);
+});
+
+client.on('channelDelete', channel => {
+	console.log(`[%d]onChannelDelete:   ${channel.name}`, ++count);
+});
+
+client.on('channelPinsUpdate', (channel, time) => {
+	console.log(`[%d]onChannelPinsUpdate:   ${channel.name} updated at ${time}`, ++count);
+});
+
+client.on('channelUpdate', (oldChannel, newChannel) => {
+	console.log(`[%d]onChannelUpdate: from  ${oldChannel.name} to ${newChannel.name}`, ++count);
+});
+
+client.on('guildMemberAdd', member => {
+	console.log(`[%d]onGuildMemberAdd: Member ${member.name} added!`, ++count);
+});
+
+
+client.on('ready', () => {
+	console.log(`[%d]Logged in as ${client.user.tag}!`, ++count);
+	client.channels.fetch('892571527000776835').then(channel => {
+		console.log(channel.name);
+		channel.send('I\'m bot. Nice to meet U!');
+	}).catch(console.error);
+});
+
+
+client.on('messageCreate', message => {
+	console.log("[%d][content] ",  ++count, message.content)
+	if(message.content.startsWith('$hello')) {
+		console.log("[%d][channelId] %d, \n\t[Owner] ", count, message.channelId, message.author.username)
+		console.log("[%d][channelId] %d, \n\t[Owner] ", count, message.channel.id, message.author.username)
+		message.channel.send('Hi!');
+	}
+	else {
+		if(message.author == client.user) {
+			console.log("[%d][!] ", count)
+		}
+	}
+});
+
+client.on('messageDelete', message => {
+	console.log("[%d][Message %s is deleted by %s] ",  ++count, message.content, message.author.username)
+});
+
+client.on('typingStart', typing => {
+	console.log("[%d] Someone typing ",  ++count, typing.user)
+});
+
+client.on('emojiCreate', emoji => {
+	console.log("[%d] Emoji ID ",  ++count, emoji.id)
+	const channel = client.channels.cache.get(cID);
+	channel.send('content');
+});
+
+
+// Login to Discord with your client's token
+client.login(token);
+client.channels.fetch(arrChannelID[1]).then(channel => {
+	console.log(channel.name);
+	channel.send('Test input');
+}).catch(console.error);
+client.destroy()
