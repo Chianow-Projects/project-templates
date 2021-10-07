@@ -1,0 +1,521 @@
+[{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41aa"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 246,
+  "netspace": 643150548554625800,
+  "height": 474723,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 35840,
+  "reward": 2,
+  "price": 0.04363,
+  "githubLink": "https://github.com/DogeChia/doge-chia",
+  "websiteLink": "https://dogechia.org/",
+  "forkId": 8,
+  "name": "DogeChia",
+  "symbol": "XDG",
+  "picUrl": "/resources/images/forks/dogechia.png",
+  "startDate": {
+    "$date": "2021-07-03T00:00:00Z"
+  },
+  "noWallet": false,
+  "crawl": false,
+  "vip": 2,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41b0"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 124,
+  "netspace": 532550655936561150,
+  "height": 492361,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0.01595,
+  "githubLink": "https://github.com/GetGoji/goji-blockchain/",
+  "websiteLink": "https://getgoji.net/",
+  "forkId": 11,
+  "name": "Goji",
+  "symbol": "XGJ",
+  "picUrl": "/resources/images/forks/goji.jpg",
+  "startDate": {
+    "$date": "2021-06-26T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41b4"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 125,
+  "netspace": 440226863575466000,
+  "height": 435428,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0.0021,
+  "githubLink": "https://github.com/avocado-network/avocado-blockchain",
+  "websiteLink": "https://avocadonetwork.net/",
+  "forkId": 13,
+  "name": "Avocado",
+  "symbol": "AVO",
+  "picUrl": "/resources/images/forks/avocado.png",
+  "startDate": {
+    "$date": "2021-07-09T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41b6"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 208,
+  "netspace": 288958182761173800,
+  "height": 339325,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 62,
+  "reward": 10,
+  "price": 0.0006,
+  "githubLink": "https://github.com/pinksheetscrypto/covid-blockchain",
+  "websiteLink": "https://www.pinksheetscrypto.com/",
+  "forkId": 14,
+  "name": "Covid",
+  "symbol": "COV",
+  "picUrl": "/resources/images/forks/covid.png",
+  "startDate": null,
+  "noWallet": false,
+  "crawl": false,
+  "vip": 2,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41b8"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 125,
+  "netspace": 362539770003324900,
+  "height": 394329,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0.00379,
+  "githubLink": "https://github.com/Taco-Network/taco-blockchain",
+  "websiteLink": "https://taconetwork.net/",
+  "forkId": 15,
+  "name": "Taco",
+  "symbol": "XTX",
+  "picUrl": "/resources/images/forks/taco.png",
+  "startDate": {
+    "$date": "2021-07-15T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41ba"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 125,
+  "netspace": 448108162923364350,
+  "height": 412383,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0.00285,
+  "githubLink": "https://github.com/Kale-Network/kale-blockchain",
+  "websiteLink": "https://www.kalenetwork.org/",
+  "forkId": 16,
+  "name": "Kale",
+  "symbol": "XKA",
+  "picUrl": "/resources/images/forks/kale.png",
+  "startDate": {
+    "$date": "2021-07-11T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41bc"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 125,
+  "netspace": 320881473450147840,
+  "height": 487351,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0.00616,
+  "githubLink": "https://github.com/denisio/seno-blockchain",
+  "websiteLink": "https://seno.uno/",
+  "forkId": 17,
+  "name": "Seno",
+  "symbol": "XSE",
+  "picUrl": "/resources/images/forks/seno.png",
+  "startDate": {
+    "$date": "2021-06-28T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41c0"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 127,
+  "netspace": 368169269537538050,
+  "height": 408666,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0.01644,
+  "githubLink": "https://bitbucket.org/Socks-Network/socks-blockchain/src/main/",
+  "websiteLink": "https://socks.works/",
+  "forkId": 20,
+  "name": "Socks",
+  "symbol": "SOCK",
+  "picUrl": "/resources/images/forks/socks.png",
+  "startDate": null,
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41a0"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 239,
+  "netspace": 800723477070193800,
+  "height": 354532,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 20,
+  "reward": 2,
+  "price": 0.01168,
+  "githubLink": "https://github.com/Spare-Network/spare-blockchain",
+  "websiteLink": "https://spare.farm/",
+  "forkId": 3,
+  "name": "Spare",
+  "symbol": "SPARE",
+  "picUrl": "/resources/images/forks/spare.jpg",
+  "startDate": {
+    "$date": "2021-06-20T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": false,
+  "vip": 2,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c419e"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 1474,
+  "netspace": 3055951710335600600,
+  "height": 561279,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 140288,
+  "reward": 2,
+  "price": 0.51465,
+  "githubLink": "https://github.com/Flax-Network/flax-blockchain",
+  "websiteLink": "https://flaxnetwork.org/",
+  "forkId": 2,
+  "name": "Flax",
+  "symbol": "XFX",
+  "picUrl": "/resources/images/forks/flax.png",
+  "startDate": {
+    "$date": "2021-06-15T00:00:00Z"
+  },
+  "noWallet": false,
+  "crawl": false,
+  "vip": 1,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41a4"
+  },
+  "rateMojo": 1e-8,
+  "rateColoured": 0,
+  "loveCnt": 2662,
+  "netspace": 131354432791805200,
+  "height": 431188,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 4672,
+  "reward": 180,
+  "price": 0.00932,
+  "githubLink": "https://github.com/HiveProject2021/chives-blockchain",
+  "websiteLink": "https://www.chivescoin.org/",
+  "forkId": 5,
+  "name": "Chives",
+  "symbol": "XCC",
+  "picUrl": "/resources/images/forks/chives.png",
+  "startDate": {
+    "$date": "2021-07-10T00:00:00Z"
+  },
+  "noWallet": false,
+  "crawl": false,
+  "vip": 1,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41a8"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 1874,
+  "netspace": 744455136427174500,
+  "height": 440122,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 290,
+  "reward": 2,
+  "price": 0.14174,
+  "githubLink": "https://github.com/HDDcoin-Network/hddcoin-blockchain",
+  "websiteLink": "https://hddcoin.org/",
+  "forkId": 7,
+  "name": "HDDCoin",
+  "symbol": "HDD",
+  "picUrl": "/resources/images/forks/hddcoin.png",
+  "startDate": {
+    "$date": "2021-07-08T00:00:00Z"
+  },
+  "noWallet": false,
+  "crawl": false,
+  "vip": 2,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41a2"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 777,
+  "netspace": 0,
+  "height": 0,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 2,
+  "price": 0,
+  "githubLink": "https://github.com/silicoin-network/silicoin-blockchain",
+  "websiteLink": "https://www.silicoin.cc/",
+  "forkId": 4,
+  "name": "Silicoin",
+  "symbol": "tSIT",
+  "picUrl": "/resources/images/forks/silicoin.png",
+  "startDate": {
+    "$date": "2021-07-12T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": false,
+  "vip": 2,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c419c"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 1697,
+  "netspace": 40617443043840040000,
+  "height": 964910,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 3056,
+  "reward": 2,
+  "price": 169.88,
+  "githubLink": "https://github.com/Chia-Network/chia-blockchain",
+  "websiteLink": "https://www.chia.net/",
+  "forkId": 1,
+  "name": "Chia",
+  "symbol": "XCH",
+  "picUrl": "/resources/images/forks/chia.png",
+  "startDate": null,
+  "noWallet": false,
+  "crawl": false,
+  "vip": 1,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41ae"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 168,
+  "netspace": 567453553048682500,
+  "height": 701638,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 500,
+  "price": 0.00028,
+  "githubLink": "https://github.com/ChainGreenOrg/chaingreen-blockchain",
+  "websiteLink": "https://www.chaingreen.org/",
+  "forkId": 10,
+  "name": "ChainGreen",
+  "symbol": "CGN",
+  "picUrl": "/resources/images/forks/chaingreen.jpg",
+  "startDate": {
+    "$date": "2021-05-21T00:00:00Z"
+  },
+  "noWallet": true,
+  "crawl": true,
+  "vip": 3,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "612ce6bb9796f40d508c41a6"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 2103,
+  "netspace": 896902635329684700,
+  "height": 461034,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 23040,
+  "reward": 4,
+  "price": 0.06439,
+  "githubLink": "https://github.com/Flora-Network/flora-blockchain",
+  "websiteLink": "https://floracoin.farm/",
+  "forkId": 6,
+  "name": "Flora",
+  "symbol": "XFL",
+  "picUrl": "/resources/images/forks/flora.png",
+  "startDate": {
+    "$date": "2021-07-10T00:00:00Z"
+  },
+  "noWallet": false,
+  "crawl": false,
+  "vip": 2,
+  "__v": 0,
+  "showList": true
+},{
+  "_id": {
+    "$oid": "613f459ca6d81308f4413dac"
+  },
+  "rateMojo": 0,
+  "rateColoured": 0,
+  "loveCnt": 0,
+  "netspace": 0,
+  "height": 0,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 0,
+  "reward": 0,
+  "price": 1,
+  "githubLink": "",
+  "websiteLink": "",
+  "forkId": 100,
+  "name": "Tether-TCR20",
+  "symbol": "USDT",
+  "picUrl": "/resources/images/forks/usdt.png",
+  "startDate": null,
+  "noWallet": false,
+  "showList": false,
+  "crawl": false,
+  "vip": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6142343a1a1c840ee06c0d84"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 424,
+  "netspace": 604792498686905600,
+  "height": 431768,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 34,
+  "reward": 20,
+  "price": 0.01662,
+  "githubLink": "https://github.com/GreenDoge-Network/greendoge-blockchain",
+  "websiteLink": "https://greendoge.dog/",
+  "forkId": 21,
+  "name": "GreenDoge",
+  "symbol": "GDOG",
+  "picUrl": "/resources/images/forks/greendoge.png",
+  "startDate": null,
+  "noWallet": false,
+  "showList": true,
+  "crawl": true,
+  "vip": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "615072988d023015242cae91"
+  },
+  "rateMojo": 1e-12,
+  "rateColoured": 0,
+  "loveCnt": 136,
+  "netspace": 233331047925699520,
+  "height": 336661,
+  "prefarm": null,
+  "totalCoinSupply": 0,
+  "difficulty": 4128768,
+  "reward": 18,
+  "price": 0.002,
+  "githubLink": "https://github.com/dream80/lucky-blockchain",
+  "websiteLink": "https://www.luckysix.top",
+  "forkId": 22,
+  "name": "Lucky",
+  "symbol": "SIX",
+  "picUrl": "/resources/images/forks/lucky.png",
+  "startDate": null,
+  "noWallet": false,
+  "showList": true,
+  "crawl": true,
+  "vip": 2,
+  "__v": 0
+}]

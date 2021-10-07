@@ -1,0 +1,45 @@
+{
+    "CSAT_total": 0,
+    "CSAT_per": 0,
+    "CSAT_avg": 0,
+    "dataCSAT_avg": [
+        { "dv": "Chuyển tiền qua SĐT", "csat": [0,0,0,0,0]},
+        { "dv": "Chuyển tiền liên NH", "csat": [0,0,0,0,0]},
+        { "dv": "Nạp tiền", "csat": [0,0,0,0,0]},
+        { "dv": "Nạp tiền điện thoại", "csat": [0,0,0,0,0]},
+        { "dv": "Mua thẻ cào", "csat": [0,0,0,0,0]},
+        { "dv": "Mua data", "csat": [0,0,0,0,0]},
+        { "dv": "Điện thoại cố định", "csat": [0,0,0,0,0]},
+        { "dv": "Tiền điện", "csat": [0,0,0,0,0]},
+        { "dv": "Tiền nước", "csat": [0,0,0,0,0]},
+        { "dv": "Internet", "csat": [0,0,0,0,0]}
+    ],
+    "data01": [
+        {"Nguyên Nhân": "Bảo mật thông tin", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Nguyên Nhân": "Tốc độ giao dịch", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Nguyên Nhân": "Thao tác", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Nguyên Nhân": "Chi phí", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Nguyên Nhân": "Khuyễn mãi", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Nguyên Nhân": "Lỗi", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Nguyên Nhân": "Khác", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 }
+    ],
+    "data02": [
+        {"Dịch vụ": "Chuyển tiền qua SĐT", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Chuyển tiền liên NH", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Nạp tiền", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Nạp tiền điện thoại", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Mua thẻ cào", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Mua data", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Điện thoại cố định", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Tiền điện", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Tiền nước", "Tỷ lệ": 0, "Số lưyaợng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Dịch vụ": "Internet", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 }
+      ],
+    "data03":[
+        {"Độ tuổi": "18 tuổi -> 24 tuổi", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Độ tuổi": "25 tuổi -> 34 tuổi", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Độ tuổi": "35 tuổi -> 44 tuổi", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Độ tuổi": "45 tuổi -> 54 tuổi", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 },
+        {"Độ tuổi": "Trên 55", "Tỷ lệ": 0, "Số lượng": 0, "Điểm CSAT tb": 0, "Ảnh hưởng": 0 }
+      ]
+}

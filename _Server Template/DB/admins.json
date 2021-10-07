@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6119d765f494e80790075930"
+  },
+  "adminID": "adm13c9zjc1hskse2904scnow",
+  "adminAcc": "khanhtd.it@gmail.com",
+  "password": "e10adc3949ba59abbe56e057f20f883e",
+  "role": "root",
+  "timeStamp": {
+    "$date": "2021-08-16T03:11:33.100Z"
+  },
+  "__v": 0,
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0cCI6ImFjY2VzcyIsImFkbWluSUQiOiJhZG0xM2M5empjMWhza3NlMjkwNHNjbm93IiwiaWF0IjoxNjMzNjE2OTEzLCJleHAiOjE2MzM2NjAxMTN9.A_xSAmzKy-hk1EnrtAAAjGJOtzL5CTTGCoxPXXvLKGA",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0cCI6InJlZnJlc2giLCJhZG1pbklEIjoiYWRtMTNjOXpqYzFoc2tzZTI5MDRzY25vdyIsImlhdCI6MTYzMzYxNjkxMywiZXhwIjoxNjMzODc2MTEzfQ.kkzA7Lub89-X-0EITF16r32A0yaAnfjDngJQVD85VpY"
+}]
