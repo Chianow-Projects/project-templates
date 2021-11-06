@@ -11,6 +11,10 @@ class StatisticCommand(Enum):
     LISTED_USER_RECHARGE                = 5
     LISTED_USER_TRANSACTION             = 6
 
+class GetUserInfoType(Enum):
+    GET_USER_INFOR_BY_ONLY_ID        = 1
+    GET_USER_INFOR_BY_ONLY_NAME      = 2
+
 
 
 class DataUnit():

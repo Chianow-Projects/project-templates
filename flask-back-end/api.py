@@ -1,5 +1,4 @@
 import flask
-from pyasn1.compat import dateandtime
 import pymongo
 import json
 from bson.json_util  import dumps, loads
@@ -7,8 +6,9 @@ import datetime
 from datetime import timedelta
 from flask import request, jsonify
 from flask_cors import CORS
+from pymongo.message import _EMPTY
 
-from defines import StatisticCommand, DataUnit
+from defines import StatisticCommand, GetUserInfoType, DataUnit
 
 DATA_UNIT = DataUnit.getInstance()
 client = pymongo.MongoClient("mongodb://localhost:27017/") 
@@ -43,12 +43,45 @@ def getUsersData():
 
 @app.route('/api/test/userinfo', methods=['GET'])
 def getUserInfo():
-    accID = request.args.get('id')
-    userforks = wallets.find({'accID': accID})
+    count = 0
+    cmd = int(request.args.get('cmd'))
+    userforks = None
+    transactionhistory = None
+    if cmd == GetUserInfoType.GET_USER_INFOR_BY_ONLY_ID._value_:
+        print("")
+        accID = request.args.get('value')
+        userforks = wallets.find({'accID': accID})
+        transactionhistory = transactions.find({'accID': accID}).sort([('timeStamp', -1)])
+    elif cmd == GetUserInfoType.GET_USER_INFOR_BY_ONLY_NAME._value_:
+        accName = request.args.get('value')
+        accID = accounts.find_one({'accName' : accName})['accID']
+        userforks = wallets.find({'accID': accID})
+        transactionhistory = transactions.find({'accID': accID}).sort([('timeStamp', -1)])
+        print("")
+    else:
+        print("The wrong command!")
+
+
+
     resp = []
     resp.append({'key': accID})
     resp[0]['uwallets'] = list(userforks)
+    resp[0]['uhistory'] = list(transactionhistory)
     # resp.append({'uwallets': list(userforks)})
+
+    if len(resp[0]['uwallets']) == 0:
+        return flask.abort(404)
+
+    for item in resp[0]['uwallets']:
+        item['forkSymbol'] = forks.find_one({'forkId' : { '$eq' : item['forkId']}})['symbol']
+        item['key'] = count + 1
+        count = count + 1
+
+    count = 0
+    for item in resp[0]['uhistory']:
+        item['key'] = count + 1
+        count = count + 1
+
     return dumps(resp)
 
 @app.route('/api/test/shortchart')
@@ -119,7 +152,7 @@ def autoUpdates():
     resp['noninteractive'] = accounts.count_documents({'dailyCount' : {'$eq' : 0}})
     """----------"""
     now = datetime.datetime.now()
-    startPoint = dateandtime.datetime(now.year, now.month, now.day, 0, 0, 0)
+    startPoint = datetime.datetime(now.year, now.month, now.day, 0, 0, 0)
     resp['newcomers'] = accounts.count_documents({'timeStamp' : {'$gte' : startPoint}})
     """----------"""
     resp['logAct'] = list(activities.find().sort([('timestamp', -1)]).limit(10))
