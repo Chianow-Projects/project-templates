@@ -1,6 +1,5 @@
 from enum import Enum
 
-from werkzeug.sansio.multipart import Data
 
 
 class StatisticCommand(Enum):
@@ -14,6 +13,10 @@ class StatisticCommand(Enum):
 class GetUserInfoType(Enum):
     GET_USER_INFOR_BY_ONLY_ID        = 1
     GET_USER_INFOR_BY_ONLY_NAME      = 2
+
+    ADVANCED_GET_IN_PAST             = 10
+
+    GET_ALL_OF_THEM                  = 20
 
 
 

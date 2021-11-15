@@ -1,3 +1,4 @@
+from typing import ItemsView
 import flask
 import pymongo
 import json
@@ -9,8 +10,10 @@ from flask_cors import CORS
 from pymongo.message import _EMPTY
 
 from defines import StatisticCommand, GetUserInfoType, DataUnit
+from CmnUtils import Singleton
+from functions import getLockedBalance, getUserBalanceInformation, getBalanceInformation, getTotalBalanceOfSytemType1
 
-DATA_UNIT = DataUnit.getInstance()
+
 client = pymongo.MongoClient("mongodb://localhost:27017/") 
 db = client["chianow"] 
 accounts = db["accounts"]
@@ -18,6 +21,8 @@ forks = db["chiaforks"]
 wallets = db["wallets"]
 activities = db["loginactivitys"]
 transactions = db["transactionnows"]
+
+DATA_UNIT = Singleton(db)
 
 
 app = flask.Flask(__name__)
@@ -45,10 +50,14 @@ def getUsersData():
 def getUserInfo():
     count = 0
     cmd = int(request.args.get('cmd'))
+    history = bool(request.args.get('history'))
     userforks = None
     transactionhistory = None
+    
+    resp = []
+
+    # switching cmd
     if cmd == GetUserInfoType.GET_USER_INFOR_BY_ONLY_ID._value_:
-        print("")
         accID = request.args.get('value')
         userforks = wallets.find({'accID': accID})
         transactionhistory = transactions.find({'accID': accID}).sort([('timeStamp', -1)])
@@ -57,31 +66,79 @@ def getUserInfo():
         accID = accounts.find_one({'accName' : accName})['accID']
         userforks = wallets.find({'accID': accID})
         transactionhistory = transactions.find({'accID': accID}).sort([('timeStamp', -1)])
-        print("")
+    elif cmd == GetUserInfoType.GET_ALL_OF_THEM._value_:
+        ''' Get all '''
+        _tmp = getTotalBalanceOfSytemType1()
+        resp.append({'key': 'all'})
+        resp[0]['uwallets'] = [{'balanceReal' : _tmp[0], 'balanceLocked' : _tmp[1], 'totalBalance': _tmp[2], 'forkSymbol':'ALL', 'key': 1}]
+        return dumps(resp)
+
     else:
+        
         print("The wrong command!")
 
-
-
-    resp = []
+    
     resp.append({'key': accID})
-    resp[0]['uwallets'] = list(userforks)
-    resp[0]['uhistory'] = list(transactionhistory)
-    # resp.append({'uwallets': list(userforks)})
+    # resp[0]['uwallets'] = list(userforks)
+    # resp[0]['uhistory'] = list(transactionhistory)
 
-    if len(resp[0]['uwallets']) == 0:
+    if userforks is None or transactionhistory is None == 0:
         return flask.abort(404)
 
-    for item in resp[0]['uwallets']:
+    tmp_userforks = list(userforks)
+    for item in tmp_userforks:
+        '''Remove unused key'''
+        if item.__contains__('_id'):
+            del item['_id']
+        if item.__contains__('__v'):
+            del item['__v']
+
+        '''Count Balance'''
+        _fork = item.get('forkId')
+        if _fork is None:
+            return flask.abort(501, "ForkID cant be found!")
+        _rateMojo = float(forks.find_one({'forkId' : { '$eq' : _fork}})['rateMojo'])
+
+        '''Forward balance got from the lastest document is the balance value'''
+        _transactionHistory = transactions.find({'accID': accID, 'forkId': _fork})
+        _transactionList = list(_transactionHistory)
+        if len(_transactionList) == 0:
+            item['balanceReal']  = 0
+        else:
+            item['balanceReal'] = (_transactionList)[-1]['forwardBalance']*_rateMojo 
+        '''Locked balance got by sum(LOCK) - sum(UNLOCK)'''
+        _transactionHistory = transactions.find({'accID': accID, 'forkId': _fork, '$or': [{ 'type': { '$eq': 'LOCK' }},{ 'type': { '$eq': 'UNLOCK' }}]})                                                                     
+        _balanceInfoFromTransactionHistory = getUserBalanceInformation(_transactionHistory)
+        item['balanceLocked'] = float(_balanceInfoFromTransactionHistory[1])*_rateMojo
+        '''Total balance got by Balance + |Locked Balance|'''
+        item['totalBalance'] = item['balanceReal'] + abs(item['balanceLocked'])
+
+        '''Fork descriptions'''
         item['forkSymbol'] = forks.find_one({'forkId' : { '$eq' : item['forkId']}})['symbol']
+
+        '''Unique value'''
         item['key'] = count + 1
         count = count + 1
+    resp[0]['uwallets'] = tmp_userforks
 
-    count = 0
-    for item in resp[0]['uhistory']:
-        item['key'] = count + 1
-        count = count + 1
+    if history:
+        count = 0
+        tmp_transactionhistory = list(transactionhistory)
+        for item in tmp_transactionhistory:
+            '''Remove unused key'''
+            if item.__contains__('_id'):
+                del item['_id']
+            if item.__contains__('__v'):
+                del item['__v']
 
+            '''Unique value'''
+            item['key'] = count + 1
+            count = count + 1
+
+        
+        resp[0]['uhistory'] = tmp_transactionhistory
+    else:
+        resp[0]['uhistory'] = list()
     return dumps(resp)
 
 @app.route('/api/test/shortchart')
